@@ -1,0 +1,18 @@
+# Cargo files
+/target/
+/.cargo/
+
+# Output
+dist
+main.output.css
+
+# Node.js files
+node_modules
+npm-debug.log
+yarn-error.log
+
+# macOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
