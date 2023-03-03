@@ -1,6 +1,6 @@
 {
     "$schema": "https://openapi.vercel.sh/vercel.json",
     "name": "Yew Tailwind Starter",
-    "installCommand": "chmod +x ./scripts/build.sh && ./scripts/build.sh",
+    "installCommand": "chmod +x scripts/build.sh && scripts/build.sh",
     "outputDirectory": "dist"
 }
