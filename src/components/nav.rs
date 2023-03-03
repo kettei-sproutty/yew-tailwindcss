@@ -31,14 +31,14 @@ pub fn Nav() -> Html {
                     >
                         <li>
                             <Link<Route> to={Route::Home}>
-                                <a>
+                                <a href="/">
                                     { "Home" }
                                 </a>
                             </Link<Route>>
                         </li>
                         <li>
                             <Link<Route> to={Route::About}>
-                                <a>{ "About" }</a>
+                                <a href="/about">{ "About" }</a>
                             </Link<Route>>
                         </li>
                     </ul>
@@ -46,11 +46,11 @@ pub fn Nav() -> Html {
             </div>
             <div class="navbar-center">
                 <Link<Route> to={Route::Home}>
-                    <a class="btn btn-ghost normal-case text-xl">{"Yew DaisyUI"}</a>
+                    <a href="/" class="btn btn-ghost normal-case text-xl">{"Yew DaisyUI"}</a>
                 </Link<Route>>
             </div>
             <div class="navbar-end">
-                <button class="btn btn-ghost btn-circle">
+                <button aria-label="show notification" class="btn btn-ghost btn-circle">
                     <div class="indicator">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
