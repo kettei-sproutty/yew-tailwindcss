@@ -1,5 +1,16 @@
 #!/bin/bash
 
+whereis rustup
+which rustup
+whereis cargo
+which cargo
+whereis trunk
+which trunk
+
+if test -f "$HOME/.cargo/env"; then
+  . "$HOME/.cargo/env"
+fi
+
 # Check if Rust is already installed
 if command -v rustup >/dev/null 2>&1; then
   echo "Rust is already installed"
