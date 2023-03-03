@@ -43,20 +43,6 @@ trunk build --release
 
 This will compile the app in release mode and optimize it for performance.
 
-To build the CSS stylesheet for development, run:
-
-```sh
-pnpm dev
-```
-
-This will generate the CSS stylesheet using PostCSS, with sourcemaps enabled and no minification.
-
-To build the CSS stylesheet for production, run:
-
-```sh
-pnpm build
-```
-
-This will generate the CSS stylesheet using PostCSS, with sourcemaps disabled and minification enabled.
+CSS is generated using `pnpm` and `trunk build hook`.
 
 That's it! You now have a basic Yew app with Tailwind CSS and DaisyUI for styling. From here, you can customize the app to fit your needs and add more components as necessary.
