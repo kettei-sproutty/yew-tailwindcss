@@ -7,3 +7,5 @@ fi
 
 # Copy manifest.json (unhandled by Trunk)
 cp src/assets/manifest.json dist/manifest.json
+# Copy robots.txt
+cp src/assets/robots.txt dist/robots.txt
