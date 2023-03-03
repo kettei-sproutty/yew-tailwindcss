@@ -5,7 +5,8 @@ This scaffold provides a basic setup for a Yew app with Tailwind CSS for styling
 ## To-Do
 
 -   [ ] Set up GitHub Actions for format and linting
--   [ ] Handle deployment on Vercel without removing `dist` from `.gitignore`
+-   [x] Handle deployment on Vercel without removing `dist` from `.gitignore`
+-   [ ] Improve building time
 -   [ ] Add server-side rendering (SSR)
 
 ## Technologies
