@@ -5,7 +5,6 @@ use crate::router::Route;
 
 #[function_component]
 pub fn Nav() -> Html {
-
     html! {
         <div class="navbar bg-neutral">
             <div class="navbar-start">
