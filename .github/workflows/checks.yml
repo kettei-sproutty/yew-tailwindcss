@@ -21,7 +21,6 @@ jobs:
             - name: Check formatting
               run: |
                   cargo fmt --all -- --check
-                  cargo install --list | grep rustfmt && rustfmt --version && cargo fmt -- --check
 
             - name: Lint code
               run: cargo clippy --all -- -D warnings
