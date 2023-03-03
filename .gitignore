@@ -3,7 +3,7 @@
 /.cargo/
 
 # Output
-dist
+# dist decomment, shown only for example
 main.output.css
 
 # Node.js files
