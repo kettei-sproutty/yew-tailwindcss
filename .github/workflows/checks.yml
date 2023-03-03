@@ -1,0 +1,27 @@
+name: Checks
+
+on:
+    - push
+    - pull_request
+
+jobs:
+    check:
+        name: Format and Lint
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Install Rust and Cargo
+              uses: actions-rs/toolchain@v1
+              with:
+                  toolchain: stable
+                  components: rustfmt, clippy
+
+            - name: Check formatting
+              run: |
+                  cargo fmt --all -- --check
+                  cargo install --list | grep rustfmt && rustfmt --version && cargo fmt -- --check
+
+            - name: Lint code
+              run: cargo clippy --all -- -D warnings
