@@ -3,7 +3,7 @@
 /.cargo/
 
 # Output
-# dist decomment, shown only for example
+dist
 main.output.css
 
 # Node.js files
@@ -16,3 +16,6 @@ yarn-error.log
 
 # Windows files
 Thumbs.db
+
+# Vercel
+.vercel
