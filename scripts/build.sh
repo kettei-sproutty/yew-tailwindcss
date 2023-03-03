@@ -6,5 +6,8 @@ source "$HOME/.cargo/env"
 whereis rustup
 rustup target add wasm32-unknown-unknown
 
-whereis rust
-whereis cargo
+cargo install --locked trunk
+
+whereis trunk
+
+trunk build --release
