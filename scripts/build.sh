@@ -1,15 +1,29 @@
-# echo "Install Rust, Cargo, Trunk and Build"
+#!/bin/bash
 
-curl https://sh.rustup.rs -sSf | sh -s -- -y
-source "$HOME/.cargo/env"
+# Check if Rust is already installed
+if command -v rustup >/dev/null 2>&1; then
+  echo "Rust is already installed"
+else
+  # Install Rust and Cargo
+  curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain stable
+  source "$HOME/.cargo/env"
+fi
 
-whereis rustup
 rustup target add wasm32-unknown-unknown
 
-cargo install trunk wasm-bindgen-cli
+# Check if Trunk is already installed
+if command -v trunk >/dev/null 2>&1; then
+  echo "Trunk is already installed"
+else
+  # Install Trunk
+  cargo install --locked trunk
+fi
+
+# Build WebAssembly
+trunk build --release
+
+# Build CSS
 if [ ! -f "dist/tailwind.css" ]; then
   pnpm cross-env NODE_ENV=production postcss src/styles/main.css -o "dist/tailwind.css" --minify
 fi
 
-
-trunk build --release
