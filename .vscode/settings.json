@@ -9,6 +9,6 @@
         "rust": "html"
     },
     "github.copilot.enable": {
-        "*": false // disabled for improve learning of rust lang
+        "*": false
     }
 }

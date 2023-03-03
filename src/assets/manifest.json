@@ -1,4 +1,5 @@
 {
+    "$schema": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/web-manifest.json",
     "name": "Yew Tailwind Starter",
     "short_name": "yew-tailwindcss",
     "icons": [
@@ -15,5 +16,9 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "display": "standalone"
+    "display": "standalone",
+    "prefer_related_applications": false,
+    "lang": "en",
+    "orientation": "portrait",
+    "start_url": "/"
 }

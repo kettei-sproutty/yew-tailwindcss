@@ -27,5 +27,5 @@ pub fn route_match(route: Route) -> Html {
 
 #[function_component(AppRouter)]
 pub fn app_router() -> Html {
-    return html! ( <Switch<Route> render={route_match} /> );
+    html! ( <Switch<Route> render={route_match} /> )
 }
