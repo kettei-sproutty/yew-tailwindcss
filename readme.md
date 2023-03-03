@@ -2,6 +2,12 @@
 
 This scaffold provides a basic setup for a Yew app with Tailwind CSS for styling. It also includes DaisyUI, a Tailwind CSS component library, and uses Trunk as a development server and build tool. Additionally, it uses PNPM as a package manager and PostCSS to process CSS files.
 
+## To-Do
+
+-   [ ] Set up GitHub Actions for format and linting
+-   [ ] Handle deployment on Vercel without removing `dist` from `.gitignore`
+-   [ ] Add server-side rendering (SSR)
+
 ## Technologies
 
 -   [Yew](https://yew.rs/) - A modern Rust framework for building web applications
