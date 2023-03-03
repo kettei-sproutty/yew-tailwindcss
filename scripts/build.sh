@@ -11,7 +11,7 @@ yum install wget -y
 wget -qO- https://github.com/thedodd/trunk/releases/download/v0.16.0/trunk-x86_64-unknown-linux-gnu.tar.gz | tar -xzf-
 mv trunk /vercel/.cargo/bin
 chmod +x /vercel/.cargo/bin/trunk
-yum update glibc
+yum install glibc
 
 if [ ! -f "dist/tailwind.css" ]; then
   pnpm cross-env NODE_ENV=production postcss src/styles/main.css -o "dist/tailwind.css" --minify
