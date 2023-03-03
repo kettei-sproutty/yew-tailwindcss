@@ -23,5 +23,8 @@ else
   cargo install --locked trunk
 fi
 
+# Build Yew app
+trunk build --release
+
 
 
