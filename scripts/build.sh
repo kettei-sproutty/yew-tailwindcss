@@ -1,12 +1,5 @@
 #!/bin/bash
 
-whereis rustup
-which rustup
-whereis cargo
-which cargo
-whereis trunk
-which trunk
-
 if test -f "$HOME/.cargo/env"; then
   . "$HOME/.cargo/env"
 fi
@@ -30,10 +23,10 @@ else
   cargo install --locked trunk
 fi
 
-# Build WebAssembly
+# Build Yew app
 trunk build --release
 
-# Build CSS
+# Build TailwindCSS
 if [ ! -f "dist/tailwind.css" ]; then
   pnpm cross-env NODE_ENV=production postcss src/styles/main.css -o "dist/tailwind.css" --minify
 fi
