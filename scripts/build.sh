@@ -2,4 +2,6 @@
 
 amazon-linux-extras install rust1 && pnpm install
 
-rustup --version
+whereis cargo
+whereis rustup
+whereis rustc
