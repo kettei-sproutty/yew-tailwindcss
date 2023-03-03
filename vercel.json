@@ -3,5 +3,8 @@
     "name": "Yew Tailwind Starter",
     "installCommand": "chmod u+x scripts/install.sh && scripts/install.sh",
     "buildCommand": "chmod u+x scripts/build.sh && scripts/build.sh",
-    "outputDirectory": "dist"
+    "outputDirectory": "dist",
+    "rewrites": [
+        {"source": "/(.*)", "destination": "/"}
+    ]
 }
