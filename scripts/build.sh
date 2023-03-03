@@ -6,7 +6,7 @@ source "$HOME/.cargo/env"
 whereis rustup
 rustup target add wasm32-unknown-unknown
 
-cargo install --locked trunk
+wget -qO- https://github.com/thedodd/trunk/releases/download/0.16.0/trunk-x86_64-unknown-linux-gnu.tar.gz | tar -xzf-
 
 whereis trunk
 
