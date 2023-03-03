@@ -1,6 +1,6 @@
+use crate::Route;
 use yew::prelude::*;
 use yew_router::prelude::*;
-use crate::Route;
 
 #[function_component(About)]
 pub fn about() -> Html {
