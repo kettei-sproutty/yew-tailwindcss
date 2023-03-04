@@ -36,7 +36,6 @@ pub fn app_router() -> Html {
     html! ( <Switch<Route> render={route_match} /> )
 }
 
-
 #[function_component]
 fn App() -> Html {
     html! {

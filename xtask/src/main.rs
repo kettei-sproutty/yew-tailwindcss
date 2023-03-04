@@ -1,4 +1,4 @@
-use std::{process::Command, os::unix::process::CommandExt};
+use std::{os::unix::process::CommandExt, process::Command};
 use xtask_wasm::{anyhow::Result, clap, default_dist_dir};
 
 #[derive(clap::Parser)]
@@ -20,15 +20,14 @@ fn main() -> Result<()> {
 
     match opt {
         Opt::Dist(dist) => {
-            dist
-                .dist_dir_path("apps/web/dist")
+            dist.dist_dir_path("apps/web/dist")
                 .static_dir_path("apps/web/public")
                 .app_name("web")
                 .run_in_workspace(true)
                 // .build_command(build_tailwind())
                 .run("web")?;
 
-                build_tailwind();
+            build_tailwind();
         }
         Opt::Watch(watch) => {
             let mut command = Command::new("cargo");
