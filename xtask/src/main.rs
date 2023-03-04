@@ -1,5 +1,5 @@
 use std::{os::unix::process::CommandExt, process::Command};
-use xtask_wasm::{anyhow::Result, clap, default_dist_dir};
+use xtask_wasm::{anyhow::Result, clap};
 
 #[derive(clap::Parser)]
 enum Opt {
@@ -23,11 +23,10 @@ fn main() -> Result<()> {
             dist.dist_dir_path("apps/web/dist")
                 .static_dir_path("apps/web/public")
                 .app_name("web")
+                .build_command(build_tailwind())
                 .run_in_workspace(true)
                 // .build_command(build_tailwind())
                 .run("web")?;
-
-            build_tailwind();
         }
         Opt::Watch(watch) => {
             let mut command = Command::new("cargo");
@@ -36,7 +35,11 @@ fn main() -> Result<()> {
             watch.run(command)?;
         }
         Opt::Start(dev_server) => {
-            dev_server.arg("dist").start(default_dist_dir(false))?;
+            log::info!("App ready at: {}", "127.0.0.1:8000");
+            dev_server
+                .arg("dist")
+                .start("apps/web/dist")
+                .expect("Error");
         }
     }
 
