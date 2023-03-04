@@ -1,10 +1,8 @@
 # Cargo files
-/target/
-/.cargo/
+target/
 
 # Output
 dist
-main.output.css
 
 # Node.js files
 node_modules
@@ -19,3 +17,6 @@ Thumbs.db
 
 # Vercel
 .vercel
+
+# Turbo
+.turbo

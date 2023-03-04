@@ -2,7 +2,12 @@
  * @type {import('tailwindcss/defaultConfig')}
  */
 module.exports = {
-    content: ["./src/**/*.rs", "./static/**/*.html"],
+    content: [
+        "./pages/**/*.rs",
+        "./components/**/*.rs",
+        "./public/**/*.html",
+        "./app.rs",
+    ],
     theme: {
         extend: {},
     },
