@@ -13,6 +13,6 @@ path = "src/main.rs"
 bench = false
 
 [dependencies]
-xtask-wasm = "0.1.10"
+xtask-wasm = { version = "0.1.10", features = ["wasm-opt"] }
 env_logger = "0.9"
 log = "0.4"
