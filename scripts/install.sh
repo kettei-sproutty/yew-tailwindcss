@@ -17,4 +17,4 @@ fi
 
 rustup target add wasm32-unknown-unknown
 
-cargo xtask dist
+cargo xtask dist --optimize

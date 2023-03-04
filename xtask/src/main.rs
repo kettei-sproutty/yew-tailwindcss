@@ -25,7 +25,6 @@ fn main() -> Result<()> {
                 .app_name("web")
                 .build_command(build_tailwind())
                 .run_in_workspace(true)
-                // .build_command(build_tailwind())
                 .run("web")?;
         }
         Opt::Watch(watch) => {
