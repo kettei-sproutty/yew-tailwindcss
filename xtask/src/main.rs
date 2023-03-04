@@ -35,7 +35,9 @@ fn main() -> Result<()> {
 
     let mut build_tailwind_command = process::Command::new("sh");
     build_tailwind_command.args(["-c", "pnpm build"]);
-    build_tailwind_command.output().expect("failed to execute process");
+    build_tailwind_command
+        .output()
+        .expect("failed to execute process");
 
     match opt.cmd {
         Command::Dist(arg) => {
