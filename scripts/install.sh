@@ -15,16 +15,4 @@ fi
 
 rustup target add wasm32-unknown-unknown
 
-# Check if Trunk is already installed
-if command -v trunk >/dev/null 2>&1; then
-  echo "Trunk is already installed"
-else
-  # Install Trunk
-  cargo install --locked trunk
-fi
-
-# Build Yew app
-trunk build --release
-
-
-
+cargo xtask dist
